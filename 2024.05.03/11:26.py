@@ -79,7 +79,7 @@ driver.find_element(By.XPATH,"//button[contains(@class, 'btn-dark_grey ') and co
 time.sleep(2)
 
 driver.find_element(By.XPATH,"//button[contains(@class, 'btn-dark_grey ') and contains(@class, 'btn-checkout')]").click()
-time.sleep(5)
+time.sleep(3)
 
 # 드라이버 종료
 driver.quit()
