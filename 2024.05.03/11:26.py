@@ -22,8 +22,8 @@ driver.get(url)
 id_field = driver.find_element("id","email-inp")
 pw_field = driver.find_element("id","pwd_inp")
 
-id = "detester999@gmail.com"
-pw = "Ehlswkd*1596"
+id = "detester201@gmail.com"
+pw = "Qwer123!"
 id_field.send_keys(id)
 pw_field.send_keys(pw)
 
@@ -52,9 +52,6 @@ inputqty = driver.find_element(By.ID,'lb_qty')
 inputqty.clear()
 qty = 3
 inputqty.send_keys(qty)
-
-time.sleep(2)
-
 driver.execute_script("window.scrollTo(0, window.scrollY + 300);")
 time.sleep(1)
 
@@ -72,8 +69,18 @@ time.sleep(5)
 driver.find_element(By.XPATH,"//button[contains(@class, 'btn-dark_grey ') and contains(@class, 'checkoutAll')]").click()
 time.sleep(5)
 
-driver.find_element_by_xpath("//button[@class='btn-sure' and text()='Continue To Checkout']").click()
+driver.find_element(By.XPATH,"//button[@class='btn-sure' and text()='Continue To Checkout']").click()
 time.sleep(5)
+
+driver.find_element(By.XPATH,"//button[contains(@class, 'btn-dark_grey ') and contains(@class, 'btn-goToPayment')]").click()
+time.sleep(2)
+
+driver.find_element(By.XPATH,"//button[contains(@class, 'btn-dark_grey ') and contains(@class, 'btn-goToReview')]").click()
+time.sleep(2)
+
+driver.find_element(By.XPATH,"//button[contains(@class, 'btn-dark_grey ') and contains(@class, 'btn-checkout')]").click()
+time.sleep(5)
+
 # 드라이버 종료
 driver.quit()
 
