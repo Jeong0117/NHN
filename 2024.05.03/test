@@ -1,0 +1,19 @@
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+
+# 크롬 드라이버 경로 설정
+chrome_driver_path = "/Users/nhn/Desktop/Automation/chromedriver.exe"
+
+# 크롬 드라이버 서비스 설정
+service = Service(chrome_driver_path)
+
+# 크롬 브라우저 열기
+drive = webdriver.chrome(service = service)
+
+# 웹 페이지 불러오기
+url = "https://dev-www.fashiongo.net/"
+driver.get(url)
+
+# 드라이버 종료
+driver.quit()
+
